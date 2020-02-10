@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update job</title>
+</head>
+<body>
+
+  <h2>update jobs</h2>
+
+  <form action="" method="post">
+      {%csrf_token%}
+  <span>jobs name</span><input type="text" name="jobs_name" value="{{current_job.jobs_name}}"><br><br>
+  <span>jobs description</span><input type="text" name="jobs_description" value="{{current_job.jobs_description}}"><br><br>
+  <span>jobs Title</span><input type="text" name="jobs_Title" value="{{current_job.jobs_Title}}" ><br><br>
+  <span>jobs Location</span><input type="text" name="jobs_location" value="{{current_job.location}}"><br><br>
+  <span>jobs salary</span><input type="number" name="jobs_salary" value="{{current_job.salary}}"><br><br>
+  <input type="submit" value="save job" >
+</form>
+    
+</body>
+</html>

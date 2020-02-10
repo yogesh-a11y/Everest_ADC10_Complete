@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JobsHome</title>
+</head>
+<body>
+    <h2>
+        homepage
+    </h2>
+    <div>
+        <a href="./add_jobs">Add new Jobs</a>
+        <br>
+        <br>
+
+    </div>
+    
+    <form action="">
+        <input type="text" name="query_name">
+        <input type="submit" value="Search">
+    </form>
+    <br>
+    <div>
+        {%for job in all_jobs%}
+            <div>
+                <div>
+                    <img src="{{job.job_image}}" height="100" width="100">
+                </div>
+                <span>Job Name:</span>{{job.jobs_name}}<br>
+                <span>Job Title:</span>{{job.jobs_Title}}<br>
+
+                <span>Job Description:</span>{{job.jobs_description}}<br>
+                <span>Location:</span>{{job.location}}<br>
+                <span>Salary:</span>{{job.salary}}<br>
+            </div>
+            <a href="./update_jobs/{{job.id}}">Update</a>
+            <a href="./delete/{{job.id}}">Delete</a>
+            <div>===========================</div>
+        {%endfor%}
+    </div>
+
+</body>
+</html>

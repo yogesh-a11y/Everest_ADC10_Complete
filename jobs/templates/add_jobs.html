@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>add jobs</title>
+</head>
+<body>
+    <h2>add section</h2>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+    <span>Job Image: <input type="file" name="job_logo"></span>
+     <span>jobs name</span><input type="text" name="jobs_name" placeholder="Enter Job Name"><br><br>
+     <span>jobs description</span><input type="text" name="jobs_description" placeholder="Enter Job Name"><br><br>
+     <span>jobs Title</span><input type="text" name="jobs_Title" placeholder="Enter job Title" ><br><br>
+     <span>jobs Location</span><input type="text" name="jobs_location" placeholder="Enter Job Location"><br><br>
+     <span>jobs salary</span><input type="number" name="jobs_salary" placeholder="Enter Job Salary"><br><br>
+<input type="submit" value="save job" >
+   </form>
+</body>
+</html>
